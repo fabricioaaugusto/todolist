@@ -54,6 +54,9 @@ namespace TodoAPI
             }
 
             app.UseHttpsRedirection();
+            app.UseCors(c => c.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
             app.UseMvc();
         }
     }
